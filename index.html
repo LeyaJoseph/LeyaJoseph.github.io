@@ -10,15 +10,51 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/timeline.css" />
+		<link rel="stylesheet" href="assets/css/skills.css" />
+		<link rel="stylesheet" href="assets/css/projects.css" />
+<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const tabButtons = document.querySelectorAll(".tab-btn");
+  const tabContents = document.querySelectorAll(".tab-content");
+
+  tabButtons.forEach(btn => {
+    btn.addEventListener("click", function () {
+      const target = btn.getAttribute("data-tab");
+
+      // Remove active class from all buttons
+      tabButtons.forEach(b => b.classList.remove("active"));
+
+      // Hide all tab contents
+      tabContents.forEach(c => c.classList.remove("show"));
+
+      // Activate clicked button and show content
+      btn.classList.add("active");
+      document.getElementById(target).classList.add("show");
+    });
+  });
+});
+</script>
+
+<script src="js/projects.js"></script>
+
+
 	</head>
 	<body class="is-preload">
 
 		<!-- Nav -->
 			<nav id="nav">
 				<ul class="container">
-					<li><a href="#About Me">About Me</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#top" class="scrolly">About Me</a></li>
 					<li><a href="#skills">Skills</a></li>
+					<li><a href="#projects">Projects</a></li>
 					<li><a href="#Timeline">Timeline</a></li>
 					<li><a href="#contact">Contact</a></li>
 				</ul>
@@ -29,14 +65,14 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-4 col-5-large col-12-medium">
-							<span class="image fit"><img src="images/pic_leya.jpeg" alt="" /></span>
+							<span class="image fit"><img src="images/pic_leya.png" alt="" /></span>
 						</div>
 						<div class="col-8 col-7-large col-12-medium">
 							<header>
-								<h1> <strong>Leya Joseph</strong></h1>														
+								<h1> <strong>Leya Joseph</strong></h1>																			<h3 style="color: gray;"> 7+ years industry experience | Master’s in Applied AI
 							</header>
-							<p>This is the portfolio of an <strong>Aspiring AI Engineer</strong>, who is also an <strong> Aerospace Engineer at ISRO </strong> and  a <strong>post-graduate in Applied Artificial Intelligence</strong?. </p>
-							<p> Welcome! </p>
+							<p style="text-align: justify;">Building intelligent, context-aware AI solutions that transform engineering challenges into high-performance, actionable outcomes.</p>
+							<!-- <p style="text-align: justify;"> With a <strong>Master’s in Applied AI</strong> and <strong>7+ years of industry experience</strong>, I turn complex engineering challenges into <strong>intelligent, high-performance solutions</strong> using </strong>AI, advanced simulation, analytics, and optimization</strong>. </p> -->
 							<a href="#work" class="button large scrolly">Learn more about me!</a>
 						</div>
 					</div>
@@ -47,113 +83,492 @@
 			<article id="work" class="wrapper style2">
 				<div class="container">
 					<header>
-						<h2>Here's all the stuff I do.</h2>
-						<!--<p>Odio turpis amet sed consequat eget posuere consequat.</p> -->
+						<h2>More About Me!</h2>
 					</header>
 					<div class="row aln-center">
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
-								<span class="icon featured fa-comments"></span>
-								<h3>6+ years in Aerospace</h3>
+								<span class="image fit" style="display:block; text-align:center;">
+    									<img src="images/aerospace_icon_1.png" alt="" style="width:100px; height:auto; display:inline-block; margin-bottom:20px;"/>
+								</span>
+								<h3>7+ years in Aerospace</h3>
+<style>
+ul {
+  text-align: justify; /* Justifies the text inside the list items */
+}
+li {
+  margin-bottom: 10px; /* Optional: spacing between items */
+}
+</style>
 								<p> <ul> 
-								  <li> Solving and analyzing cutting edge scientific problems </li>
-                                  <li> Design optimisation </li>
-                                  <li> Computational Fluid Mechanics </li> </ul> </p>
+									<li> <strong>Tackling advanced design challenges</strong> with innovative engineering solutions</li>
+									<li> <strong>Leveraging AI for design optimization</strong> to enhance performance and efficiency</li>
+									<li> <strong>Conducting high-fidelity CFD simulations</strong> for accurate aerodynamic and fluid analyses</li>
+									<li> <strong>Extracting actionable insights</strong> from large-scale datasets to drive informed decisions</li>
+									<li> <strong>Guiding and mentoring students</strong> on technical projects and research initiatives</li>
+								<!--
+								  <li> Solving and analyzing cutting edge design problems </li>
+                                  				  <li> AI-driven design optimisation </li>
+				                                  <li> Computational Fluid Dynamics simulations</li> 
+								  <li> Insights from large data-sets </li>
+								  <li> Project mentor to students </li> -->
+								  </ul> </p>
 							</section>
 						</div>
 						<div class="col-4 col-6-medium col-12-small">
 							<section class="box style1">
-								<span class="icon solid featured fa-camera-retro"></span>
+								<span class="image fit" style="display:block; text-align:center;">
+    									<img src="images/ai_icon_1.png" alt="" style="width:100px; height:auto; display:inline-block; margin-bottom:20px;"/>
+								</span>
+								<h3>Diverse AI Projects</h3>
+								<p> <ul> 
+								  <li> <strong> End-to-End AI Solutions:</strong> Tackled real-world, high-impact problems from defining AI tasks to deployment and continuous improvement.</li> <!-- by analyzing business challenges, defining AI tasks, building data pipelines, and deploying models with continuous improvement.</li>-->
+								  <li> <strong> Diverse Problem Types:</strong> Multi-class classification, anomaly detection, object recognition etc.</li>
+								  <li> <strong> Multi-Modal Data Handling:</strong> Processed images, tabular data, and audio signals with Python pipelines.</li>
+								  <li> <strong> Model Development & Optimization:</strong> Built and fine-tuned ML models, optimizing performance and analyzing limitations.</li>
+								  <li> <strong> Deployment & Visualization:</strong> Deployed models on AWS and created dashboards with Tableau.</li> </ul> </p>
+							</section>
+						</div>
+						<div class="col-4 col-6-medium col-12-small">
+							<section class="box style1">
+								<span class="image fit" style="display:block; text-align:center;">
+    									<img src="images/masters_icon_1.png" alt="" style="width:100px; height:auto; display:inline-block; margin-bottom:20px;"/>
+								</span>
 								<h3>MS in Applied AI</h3>
 								<p> <ul> 
-								  <li> Core courses on computer vision, NLP, MLOps, IoT and so on. </li>
-                                  <li> Projects on core subjects </li>
-                                  <li> Team work </li> </ul> </p>
-							</section>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<section class="box style1">
-								<span class="icon featured fa-thumbs-up"></span>
-								<h3>Personal Projects</h3>
-								<p> <ul> 
-								  <li> AI solutions to real world problems </li>
-                                  <li> Kaggle competitions </li>
-                                  <li> Always ready to explore and learn </li> </ul> </p>
+								  <li> <strong>University of San Diego, CA (May 2022 - Jan 2025)</strong></li>
+								  <li> <strong>GPA : 4.0 / 4.0</strong></li>
+								  <li> Completed advanced coursework in <strong>Machine Learning, Deep Learning, Computer Vision, Natural Language Processing (NLP), MLOps, and IoT</strong></li>
+                                  				  <li> Developed <strong>hands-on projects</strong> applying AI and data-driven techniques across core subjects </li> </ul> </p>
 							</section>
 						</div>
 					</div>
 					<footer>
 						<!-- <p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p> -->
-						<a href="#portfolio" class="button large scrolly">See some of my recent work!</a>
+						<a href="#projects" class="button large scrolly">See some of my recent work!</a>
 					</footer>
 				</div>
 			</article>
 
-		<!-- Portfolio -->
-			<article id="portfolio" class="wrapper style3">
+		<!-- Skills -->
+			<article id="skills" class="wrapper style3">
 				<div class="container">
 					<header>
-						<h2>Here’s some stuff I made recently.</h2>
-						<p>Proin odio consequat  sapien vestibulum consequat lorem dolore feugiat.</p>
+						<h2>Skills</h2>
+					</header>
+
+				<div class="tabs-container">
+				 	<!-- Tab buttons -->
+  					<div class="tabs-buttons">
+    						<button class="tab-btn active" data-tab="tab1">Core AI & ML</button>
+    						<button class="tab-btn" data-tab="tab2">LLMs & Agentic AI</button>
+    						<button class="tab-btn" data-tab="tab3">Data & Programming</button>
+    						<button class="tab-btn" data-tab="tab4">Cloud & MLOps</button>
+    						<button class="tab-btn" data-tab="tab5">Engineering & Applied AI</button>
+						<button class="tab-btn" data-tab="tab6">Physics Simulation</button>
+    					</div>
+
+  					<!-- Tab content -->
+					<!--- TAB 1 --->
+					<div class="tab-content show" id="tab1">
+
+  					  <div class="skills-two-col">
+  					
+  					    <!-- Concepts -->
+  					    <div class="skill-category">
+  					      <h4>Concepts</h4>
+  					      <ul class="skills-list">
+  					        <li>Supervised & Unsupervised Learning</li>
+  					        <li>Surrogate Modeling & Optimization</li>
+  					        <li>Model Evaluation & Error Analysis</li>
+  					      </ul>
+  					    </div>
+  					
+  					    <!-- Tools -->
+  					    <div class="skill-category">
+  					      <h4>Tools</h4>
+  					      <div class="skills">
+  					        <span class="skill-pill">Python</span>
+  					        <span class="skill-pill">XGBoost</span>
+  					        <span class="skill-pill">TensorFlow</span>
+  					        <span class="skill-pill">Scikit-learn</span>
+  					      </div>
+  					    </div>
+  					
+  					  </div>
+  					</div>
+
+					<!--- TAB 2 --->
+  					<div class="tab-content" id="tab2">
+
+  					  <div class="skills-two-col">
+  					
+  					    <!-- Concepts -->
+  					    <div class="skill-category">
+  					      <h4>Concepts</h4>
+  					      <ul class="skills-list">
+  					        <li>Agentic Workflows</li>
+  					        <li>Retrieval-Augmented Generation (RAG)</li>
+  					        <li>Prompt Engineering & Evaluation</li>
+  					      </ul>
+  					    </div>
+  					
+  					    <!-- Tools -->
+  					    <div class="skill-category">
+  					      <h4>Tools</h4>
+  					      <div class="skills">
+  					        <span class="skill-pill">LangChain, LangGraph</span>
+  					        <span class="skill-pill">Chroma</span>
+  					        <span class="skill-pill">Gemini, OpenAI</span>
+  					        <span class="skill-pill">Langsmith</span>
+  					      </div>
+  					    </div>
+  					
+  					  </div>
+  					</div>
+
+					<!--- TAB 3 --->
+  					<div class="tab-content" id="tab3">
+  					  <div class="skills-two-col">  					
+  					    <!-- Concepts -->
+  					    <div class="skill-category">
+  					      <h4>Concepts</h4>
+  					      <ul class="skills-list">
+  					        <li>Data Preprocessing & Feature Engineering</li>
+  					        <li>Numerical Computing</li>
+  					        <li>Visualization & Analysis</li>
+  					      </ul>
+  					    </div>
+  					
+  					    <!-- Tools -->
+  					    <div class="skill-category">
+  					      <h4>Tools</h4>
+  					      <div class="skills">
+  					        <span class="skill-pill">Python (NumPy, Pandas, matplotlib, seaborn)</span>
+  					        <span class="skill-pill">MATLAB</span>
+  					        <span class="skill-pill">C++</span>
+  					        <span class="skill-pill">Tableau</span>
+  					        <span class="skill-pill">SQL (MySQL)</span>
+  					      </div>
+  					    </div>  					
+  					  </div>
+  					</div>
+
+					<!--- TAB 4 --->
+  					<div class="tab-content" id="tab4">
+  					  <div class="skills-two-col">  					
+  					    <!-- Concepts -->
+  					    <div class="skill-category">
+  					      <h4>Concepts</h4>
+  					      <ul class="skills-list">
+  					        <li>Model Lifecycle Management</li>
+  					        <li>Experiment Tracking</li>
+  					        <li>Training & Deployment Pipelines</li>
+						<li>CI/CD practices</li>
+  					      </ul>
+  					    </div>
+  					
+  					    <!-- Tools -->
+  					    <div class="skill-category">
+  					      <h4>Tools</h4>
+  					      <div class="skills">
+  					        <span class="skill-pill">AWS (SageMaker, S3, Cloudwatch)</span>
+  					        <span class="skill-pill">MLFlow</span>
+  					        <span class="skill-pill">Databricks</span>
+  					        <span class="skill-pill">Hugging Face Spaces</span>
+  					        <span class="skill-pill">Github</span>
+  					      </div>
+  					    </div>  					
+  					  </div>
+  					</div>
+
+					<!--- TAB 5 --->
+  					<div class="tab-content" id="tab5">
+  					  <div class="skills-two-col">  					
+  					    <!-- Concepts -->
+  					    <div class="skill-category">
+  					      <h4>Concepts</h4>
+  					      <ul class="skills-list">
+  					        <li>Multidisciplinary Optimization</li>
+  					        <li>Physics-informed ML</li>
+  					        <li>Simulation-to-ML Pipelines</li>
+  					      </ul>
+  					    </div>
+  					
+  					    <!-- Tools -->
+  					    <div class="skill-category">
+  					      <h4>Tools</h4>
+  					      <div class="skills">
+  					        <span class="skill-pill">CFD Solvers</span>
+  					        <span class="skill-pill">Custom Python frameworks</span>
+  					      </div>
+  					    </div>  					
+  					  </div>
+  					</div>
+	
+					<!--- TAB 6 --->
+  					<div class="tab-content" id="tab6">
+  					  <div class="skills-two-col">  					
+  					    <!-- Concepts -->
+  					    <div class="skill-category">
+  					      <h4>Concepts</h4>
+  					      <ul class="skills-list">
+  					        <li>Physics-Based Simulation usine CAE tools</li>
+  					        <li>Simulation data generation and analysis </li>
+  					        <li>Design-space exploration and optimizationfskills
+</li>
+  					      </ul>
+  					    </div>
+  					
+  					    <!-- Tools -->
+  					    <div class="skill-category">
+  					      <h4>Tools</h4>
+  					      <div class="skills">
+  					        <span class="skill-pill"><strong>Simulation Tools & Methods:</strong> ANSYS Workbench, ANSYS Fluent, Fluent Meshing, CFD++, flight-dynamics 
+simulation</span>
+  					        <span class="skill-pill"><strong>CAD & Geometry Tools:</strong> SpaceClaim, CATIA </span>
+  					      </div>
+  					    </div>  					
+  					  </div>
+  					</div>
+				</div>
+			</article>
+
+<!-- Popup Modal -->
+<div id="project-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="modal-project-content"></div>
+    </div>
+</div>
+		<!-- Portfolio -->
+
+<!-- *************************************************************************** -->
+			<article id="projects" class="wrapper style2">
+				<div class="container">
+					<header>
+						<h2>Project Highlights</h2>
 					</header>
 					<div class="row">
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-								<h3><a href="#">Magna feugiat</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-								<h3><a href="#">Veroeros primis</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-								<h3><a href="#">Lorem ipsum</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a>
-								<h3><a href="#">Tempus dolore</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic05.jpg" alt="" /></a>
-								<h3><a href="#">Feugiat aliquam</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
-						<div class="col-4 col-6-medium col-12-small">
-							<article class="box style2">
-								<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-								<h3><a href="#">Sed amet ornare</a></h3>
-								<p>Ornare nulla proin odio consequat.</p>
-							</article>
-						</div>
+					<!-- ********************** Project ******************* -->
+					   <div class="col-4 col-6-medium col-12-small">
+						 <div class="project-card">
+                        				<div class="project-preview">
+                            					<img loading="lazy" src="images/pic01.jpg" alt="Multi-Agent AI for Rapid Application Generation">
+                            					<h4>Multi-Agent AI for Rapid Application Generation</h4>
+				                           	<p class="project-brief">Built a multi-agent LLM system that converts natural language prompts into deployable Gradio apps with one-click delivery to Hugging Face Spaces.</p>
+                            					<p class="project-tools">Python, LangGraph, LLM (Gemini), Tavily, Hugging Face Spaces, LangSmith, MLFlow, Github</p>
+                        				</div>
+                        				<button class="view-details-btn">View Details</button>
+                        				<div class="project-details hidden">
+                          					<p class="project-description">
+                                					<ul><li>Developed a multi-agent AI framework using LangGraph and LLM (Google Gemini) to translate natural language prompts into Gradio applications.</li>
+                                    						<li>Automated code generation, repository management, and deployment to Hugging Face Spaces, streamlining development and testing workflows based on natural language prompts and enabling one-click delivery of runnable applications.</li>
+                                    						<li>Integrated with PyCharm IDE for seamless access, accelerating application deployment and user testing.</li>
+                                    					</ul>
+                                                            	</p>
+                            					<div class="project-links">
+                                					<a href="https://github.com/LeyaJoseph" target="_blank">Code</a>
+                            					</div>
+                        				</div>
+                    				</div>
+					</div>		
+						
+					<!-- ********************** Project ******************* -->
+					   <div class="col-4 col-6-medium col-12-small">
+						 <div class="project-card">
+                        				<div class="project-preview">
+                            					<img loading="lazy" src="images/pic01.jpg" alt="Agentic AI Chatbot with RAG">
+                            					<h4>Agentic AI Chatbot with RAG</h4>
+				                           	<p class="project-brief">Built a conversational AI agent using LangGraph and RAG, enabling context-aware, multi-turn interactions through a Gradio interface.</p>
+                            					<p class="project-tools">Python, LangGraph, LLM (Gemini), Chroma, Vector Embeddings, Gradio, LangSmith, Github</p>
+                        				</div>
+                        				<button class="view-details-btn">View Details</button>
+                        				<div class="project-details hidden">
+                          					<p class="project-description">
+                                					<ul><li>Designed conversational agents with LangGraph, implementing Retrieval-Augmented Generation (RAG) by embedding domain documents into Chroma vector stores for context-aware responses.</li>
+                                    						<li>Built an interactive Gradio-based GUI for seamless user interaction and testing.</li>
+                                    						<li>Demonstrated end-to-end workflow integration, combining retrieval, reasoning, and multi-turn conversation management.</li>
+                                    					</ul>
+                                                            	</p>
+                            					<div class="project-links">
+                                					<a href="https://github.com/LeyaJoseph" target="_blank">Code</a>
+                            					</div>
+                        				</div>
+                    				</div>
+					</div>
+					<!-- ********************** Project ******************* -->
+					<div class="col-4 col-6-medium col-12-small">
+						 <div class="project-card">
+                        				<div class="project-preview">
+                            					<img loading="lazy" src="images/pic01.jpg" alt="Symptom-Based Disease Prediction">
+                            					<h4>Symptom-Based Disease Prediction</h4>
+				                           	<p class="project-brief">Built and deployed a production-grade XGBoost disease prediction model (97% test accuracy) with an end-to-end ML pipeline on AWS.</p>
+                            					<p class="project-tools">Python, XGBoost, AWS Sagemaker, AWS S3, AWS Cloudwatch, Sagemaker Pipelines, Github</p>
+                        				</div>
+                        				<button class="view-details-btn">View Details</button>
+                        				<div class="project-details hidden">
+                          					<p class="project-description">
+                                					<ul><li>Built and deployed an XGBoost model for disease prediction, achieving 97% test accuracy.</li>
+                                    						<li>Implemented a complete end-to-end ML pipeline on AWS, including EDA, feature store creation, model training/testing, monitoring, CI/CD, and production deployment.</li>
+                                    						<li>Ensured reliable, production-ready ML workflows for real-world predictive analytics</li>
+                                    					</ul>
+                                                            	</p>
+                            					<div class="project-links">
+                                					<a href="https://github.com/LeyaJoseph" target="_blank">Code</a>
+                            					</div>
+                        				</div>
+                    				</div>
+					</div>
+					<!-- ********************** Project ******************* -->
+					<div class="col-4 col-6-medium col-12-small">
+						 <div class="project-card">
+                        				<div class="project-preview">
+                            					<img loading="lazy" src="images/pic01.jpg" alt="Preventive Maintenance – Anomaly Detection for Metro Systems">
+                            					<h4>Preventive Maintenance – Anomaly Detection for Metro Systems</h4>
+				                           	<p class="project-brief">Developed an autoencoder-based anomaly detection system that identified all known failure cases in high-frequency metro train sensor data.</p>
+                            					<p class="project-tools">Python, Tensorflow, Neural Network, Autoencoder, Github</p>
+                        				</div>
+                        				<button class="view-details-btn">View Details</button>
+                        				<div class="project-details hidden">
+                          					<p class="project-description">
+                                					<ul><li>Developed an unsupervised anomaly detection model (autoencoder) to identify failure patterns in high-frequency sensor data from a metro train air-production unit.</li>
+                                    						<li>Successfully detected all known failure cases in test data, supporting early fault detection and proactive maintenance decisions.</li>
+                                    						<li>Demonstrated application of ML models in real-world, safety-critical systems using robust analytical validation.</li>
+                                    					</ul>
+                                                            	</p>
+                            					<div class="project-links">
+                                					<a href="https://github.com/LeyaJoseph" target="_blank">Code</a>
+                            					</div>
+                        				</div>
+                    				</div>
+					</div>
+					<!-- ********************** Project ******************* -->
+					<div class="col-4 col-6-medium col-12-small">
+						 <div class="project-card">
+                        				<div class="project-preview">
+                            					<img loading="lazy" src="images/pic01.jpg" alt="Speech Emotion Recognition ">
+                            					<h4>Speech Emotion Recognition </h4>
+				                           	<p class="project-brief">Developed a CNN-based speech-emotion recognition model using Librosa features and VGG-16, enhanced with audio augmentation and transfer learning.</p>
+                            					<p class="project-tools">Python, Tensorflow, CNN, VGG-16, Fine-tuning, Librosa, Github</p>
+                        				</div>
+                        				<button class="view-details-btn">View Details</button>
+                        				<div class="project-details hidden">
+                          					<p class="project-description">
+                                					<ul><li> Generated Mel spectrogram features from audio files using the Librosa library. </li>
+                                    						<li>Developed a Convolutional Neural Network based speech-emotion recognition (SER) model on 
+the RAVDESS dataset.</li>
+                                    						<li>Boosted model performance through audio data augmentation (time-stretching, pitch shifting, noise injection), hyperparameter optimization, and fine-tuning a pre-trained VGG-16 network</li>
+                                    					</ul>
+                                                            	</p>
+                            					<div class="project-links">
+                                					<a href="https://github.com/LeyaJoseph" target="_blank">Code</a>
+                            					</div>
+                        				</div>
+                    				</div>
+					</div>
+					<!-- ********************** Project ******************* -->
+					<div class="col-4 col-6-medium col-12-small">
+						 <div class="project-card">
+                        				<div class="project-preview">
+                            					<img loading="lazy" src="images/pic01.jpg" alt="Shape and Design Optimization">
+                            					<h4>Shape and Design Optimization</h4>
+				                           	<p class="project-brief">Built Python- and MATLAB-based surrogate models and automated workflows to accelerate multidisciplinary design studies and optimization.</p>
+                            					<p class="project-tools">Python / MATLAB / C++, Genetic Algorithm, Gradient Descent Algorithm, MDO</p>
+                        				</div>
+                        				<button class="view-details-btn">View Details</button>
+                        				<div class="project-details hidden">
+                          					<p class="project-description">
+                                					<ul><li>Developed optimization and analysis workflows to support multidisciplinary design studies during conceptual and preliminary phases.</li>
+                                    						<li>Automated parametric data generation pipelines for complex geometric configurations, enabling repeatable and scalable analysis across large design spaces.</li>
+                                    						<li>Built and validated neural-network–based surrogate models in Python and MATLAB to accelerate analytical evaluations and reduce computational cost in design-space exploration.</li>
+                                    					</ul>
+                                                            	</p>
+                            					<div class="project-links">
+                                					<a href="https://github.com/LeyaJoseph" target="_blank">Code</a>
+                            					</div>
+                        				</div>
+                    				</div>
+					</div>
 					</div>
 					<footer>
-						<p>Lorem ipsum dolor sit sapien vestibulum ipsum primis?</p>
 						<a href="#contact" class="button large scrolly">Get in touch with me</a>
 					</footer>
 				</div>
 			</article>
+		<!--Timeline -->
+
+		<article id="Timeline" class="wrapper style3">
+			<header>
+			<h2>Career Timeline</h2>
+			</header>
+		<article id="Timeline_career" class="timeline">
+			<!-- Timeline Item -->
+  			<div class="timeline-item">
+    				<div class="timeline-marker">
+      					<img src="images/kovan_logo.png" alt="Kovan logo">
+    				</div>
+<div class="timeline-line"></div>
+    				<div class="timeline-content">
+      					<h3><strong>Data Scientist<strong></h3>
+      					<h4>Kovan Technology Solutions</h4>
+      					<p class="date">December 2025 - Current • USA</p>
+					<!--<p class="date">April 2025 - May 2025 • India</p>-->
+					<h5 style="text-align: justify;">Delivered customer-focused AI agents by combining LLM orchestration and structured evaluation.</h5>
+					<details>
+  					<summary style="text-align: left;">Details</summary>
+      						<ul>
+        						<li>Delivered outcome-focused AI solutions by engineering LLM-powered agents with LangChain and MLflow, enabling model tracking, xperimentation, and rapid iteration. </li>
+							<li>Designed modular agent workflows in LangGraph for autonomous code generation and testing, ensuring high-quality, and maintainable implementations aligned with customer goals. </li>
+							<li>Performed structured evaluation of LLM outputs through prompt testing, error analysis, and multi-turn behavior checks to ensure reliability and task success.</li>
+							<li>Integrated vector databases and retrieval-augmented reasoning to support context-aware AI agents, enhancing efficiency, accuracy, and reliability.</li>
+							<li>Developed data preprocessing pipelines for model fine-tuning and insight generation.</li>
+							<li>Collaborated with cross-functional teams and stakeholders to refine AI agent behavior and technical solutions, ensuring alignment with business objectives and user-centric outcomes.</li>
+
+      					</ul>
+					</details>
+
+    				</div>
+  			</div>
+
+			
+ 			<!-- Timeline Item -->
+  			<div class="timeline-item">
+    				<div class="timeline-marker">
+      					<img src="images/isro_logo.png" alt="ISRO logo">
+    				</div>
+<div class="timeline-line"></div>
+    				<div class="timeline-content">
+      					<h3><strong>SCIENTIST / ENGINEER</strong></h3>
+      					<h4>Indian Space Reasearch Organization (ISRO)</h4>
+      					<p class="date">Aug 2017 - Apr 2025 • Trivandrum, India</p>
+					<h5 style="text-align: justify;">Owned end-to-end AI solutions and optimization systems, combining surrogate modeling and agentic workflows to accelerate engineering decisions by 30%.</h5>
+					<details>
+  					<summary style="text-align: left;">Details</summary>
+	      					<ul>
+        						<li>Led engineering and AI-driven optimization efforts using Python and MATLAB, achieving a 30% reduction in preliminary design time through a cost-effective ML-based surrogate modeling approach that supported faster decision-making.</li>
+							<li>Ensured engineering best practices and OOP principles to design modular system models and robust data pipelines, enabling efficient design optimization and reliable data analysis.</li>
+							<li>Built an agentic AI framework combining simulation, visualization, and data analysis aligned with user needs and operational objectives.</li>
+							<li>Collaborated closely with product stakeholders to refine agent behavior through rapid experimentation, improving task success accuracy and supporting user-centric, iterative product delivery.</li>
+							<li>Owned the end-to-end AI solution SDLC, including requirement analysis, technical specifications, component design, experimentation, development, validation, unit testing, integration, documentation, and support, ensuring accountability for deliverables.
+							<li>Developed a novel optimization-driven method to reconstruct flight trajectories from minimal sensor data, validated against traditional techniques; awarded Best Paper at iNCMDAO 2024.</li>
+							<li>Collaborated cross-functionally with multiple teams to gather requirements for diverse analyses, delivering tailored outputs and actionable insights to support product development and data-driven decision-making.</li>
+							<li>Provided technical leadership and mentorship to undergraduate researchers, fostering knowledge sharing, domain expertise development, and continuous improvement within the team.</li>
+      						</ul>
+					</details>
+    				</div>
+  			</div>
+		</article>
+		</article>
 
 		<!-- Contact -->
 			<article id="contact" class="wrapper style4">
 				<div class="container medium">
 					<header>
-						<h2>Have me make stuff for you.</h2>
-						<p>Ornare nulla proin odio consequat sapien vestibulum ipsum.</p>
+						<h2> Ready to create impact? </h2>
+						<h3> Connect with me about roles or collaborations.</h3>
 					</header>
+<!--
 					<div class="row">
 						<div class="col-12">
 							<form method="post" action="#">
@@ -179,47 +594,42 @@
 								</div>
 							</form>
 						</div>
-						<div class="col-12">
-							<hr />
-							<h3>Find me on ...</h3>
+-->
+						<div class="container">
+  							<hr />
+  							<p>Find me on …</p>
+
 							<ul class="social">
-								<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-								<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-								<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-								<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-								<!--
-								<li><a href="#" class="icon solid fa-rss"><span>RSS</span></a></li>
-								<li><a href="#" class="icon brands fa-instagram"><span>Instagram</span></a></li>
-								<li><a href="#" class="icon brands fa-foursquare"><span>Foursquare</span></a></li>
-								<li><a href="#" class="icon brands fa-skype"><span>Skype</span></a></li>
-								<li><a href="#" class="icon brands fa-soundcloud"><span>Soundcloud</span></a></li>
-								<li><a href="#" class="icon brands fa-youtube"><span>YouTube</span></a></li>
-								<li><a href="#" class="icon brands fa-blogger"><span>Blogger</span></a></li>
-								<li><a href="#" class="icon brands fa-flickr"><span>Flickr</span></a></li>
-								<li><a href="#" class="icon brands fa-vimeo"><span>Vimeo</span></a></li>
-								-->
-							</ul>
-							<hr />
+    								<li><a href="https://www.linkedin.com/in/leya-joseph-3140369b/" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+						    		<li><a href="https://github.com/LeyaJoseph?tab=repositories" class="icon brands fa-github"><span class="label">Github</span></a></li>
+  							</ul>
+
+  							<hr />		
 						</div>
-					</div>
+
+						<style>
+						ul.social {
+  							display: flex;
+  							justify-content: center;
+  							list-style: none;
+  							padding: 0;
+  							margin: 0;
+							}
+						ul.social li {
+  							margin: 0 0.5rem;
+							}
+						</style>
+
 					<footer>
-						<ul id="copyright">
-							<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-				</div>
+  <ul id="copyright">
+    <li>&copy; 2025 Leya Joseph. All rights reserved.</li>
+    <!--<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>-->
+  </ul>
+</footer>
+
 			</article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		
 
 	</body>
 </html>
