@@ -15,6 +15,7 @@
     flex-direction: column;
     align-items: center; 
     //height: 200px; /* Fixed height for all cards */
+    height: 100%;
 }
 
 .project-card:hover {
@@ -27,7 +28,6 @@
     flex-grow: 1;
     display: flex;
     flex-direction: column;
-    height: 500px;
 }
 
 .project-preview img {

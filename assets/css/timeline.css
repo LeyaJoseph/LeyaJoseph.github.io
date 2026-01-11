@@ -1,53 +1,45 @@
 .timeline {
   position: relative;
-  padding-left: 100px;          /* Space for the line and marker */
+  padding-left: 40px;   /* small gutter on mobile */
 }
 
-/* Vertical green line */
 .timeline-line {
   position: absolute;
-  left: 100px;                   /* Where the line runs */
+  left: 20px;
   top: 0;
   bottom: 0;
   width: 3px;
-  background: #00b894;          /* Green color */
+  background: #00b894;
 }
 
-/* Timeline item container */
 .timeline-item {
   position: relative;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 }
 
-/* Circle logo to the LEFT of the line */
 .timeline-marker {
   position: absolute;
-  left: 0;                      /* Start at far left of timeline */
+  left: -20px;
   top: 0;
-  transform: translateY(0);      /* Adjust if you need vertical centering */
 }
 
 .timeline-marker img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   object-fit: cover;
   background: #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  display: block;
 }
 
-/* Content box */
 .timeline-content {
   background: #f8f9fa;
-  padding: 3rem;
+  padding: 1.25rem;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-  width: 80%;
-  position: relative;
-  left: 120px; 
+  width: 100%;
+  margin-left: 20px;
 }
-
 .timeline-content h3 {
   margin-top: 0;
   font-size: 1.5rem;
@@ -73,12 +65,27 @@
 .timeline-content li {
   margin-bottom: 0.4rem;
 }
+@media (min-width: 768px) {
+  .timeline {
+    padding-left: 100px;
+  }
 
-/* Mobile: shrink left gutter */
-@media (max-width: 600px) {
-  .timeline::before { left: 30px; }
-  .timeline-item { padding-left: 70px; }
-  .timeline-logo {
-    width: 60px; height: 60px;
+  .timeline-line {
+    left: 100px;
+  }
+
+  .timeline-marker {
+    left: 0;
+  }
+
+  .timeline-marker img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .timeline-content {
+    width: 80%;
+    padding: 3rem;
+    margin-left: 120px;
   }
 }

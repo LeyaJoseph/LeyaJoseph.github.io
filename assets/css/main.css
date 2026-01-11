@@ -1640,12 +1640,12 @@ input, select, textarea {
 
 		.image img {
 			display: block;
-			width: 100%;
 		}
 
 		.image.fit {
-			display: block;
-			width: 100%;
+			align-content: center;
+		display: inline-flex;
+		justify-content: center;
 		}
 
 		.image.featured {
@@ -1917,7 +1917,7 @@ input, select, textarea {
 
 			ul.actions li:first-child {
 				margin-left: 0;
-			}
+			}	
 
 /* Box */
 
@@ -1930,7 +1930,7 @@ input, select, textarea {
 
 		.box.style1 {
 			padding: 3em 2em 3.5em 2em;
-			height: 925px;
+			height: 100%;
 		}
 
 			.box.style1 h3 {

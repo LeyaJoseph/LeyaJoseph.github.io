@@ -47,12 +47,24 @@
 }
 
 /* Parent container for two columns */
+
 .skills-two-col {
-  display: flex;
-  gap: 40px;
-  align-items: flex-start;
-  justify-content: center;
+    display: flex;
+    flex-direction: column;   /* mobile first */
+    gap: 16px;
+    align-items: center;
 }
+
+/* Tablet & up */
+@media (min-width: 768px) {
+    .skills-two-col {
+        flex-direction: row;
+        gap: 40px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+}
+
 
 /* Each column */
 .skill-category {
