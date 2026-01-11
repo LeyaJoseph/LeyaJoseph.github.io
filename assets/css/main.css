@@ -2109,22 +2109,28 @@ input, select, textarea {
 					border-right: solid 0.75em transparent;
 					border-top: solid 0.6em #282828;
 				}
+/* =========================
+   MOBILE NAV FIX
+========================= */
 @media (max-width: 768px) {
   #nav ul {
-    display: flex;
-    justify-content: center;
-    flex-wrap: nowrap;     /* 🔴 prevent second row */
-    overflow-x: auto;      /* allow horizontal scroll */
-    -webkit-overflow-scrolling: touch;
+    display: table;       /* key: allows centering without flex */
+    margin: 0 auto;       /* center the table horizontally */
+    white-space: nowrap;  /* prevent wrap */
   }
 
   #nav li {
-    display: flex;
+    display: table-cell;  /* keep inline spacing without wrapping */
   }
 
+  /* Optional: hide active arrow on mobile */
+  #nav a.active:before {
+    display: none;
+  }
+
+  /* Optional: slightly reduce horizontal padding on mobile */
   #nav a {
-    white-space: nowrap;
-    flex-shrink: 0;
+    padding: 0 1em;
   }
 }
 
